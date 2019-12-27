@@ -10,7 +10,7 @@ In my travel log files, I assume the point-of-view of a brand new
 GCP developer. As I go along, I will make sure to cite my sources and try
 to explain as much as I can.
 
-To begin following my journey, see [The Journey Begins](journey/start).
+To begin following my journey, see [The Journey Begins](journey/overview.md).
 
 ## Before you begin
 
