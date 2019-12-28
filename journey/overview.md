@@ -10,3 +10,4 @@ I'll add more pages to my journey. You can find the source files in the
 ## Table of contents
 
   * [Getting started](getting-started.md)
+  * [Building an App Engine app](app-engine.md)
