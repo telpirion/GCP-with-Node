@@ -95,6 +95,4 @@ Cloud Shell.
 
 With my development environment ready, I can now write some code! The first
 GCP product that I'm going to tackle is
-[App Engine](https://cloud.google.com/appengine/docs/flexible/nodejs/).
-
-Next: [I build an App Engine app with Node.js!](app-engine.md)
+[App Engine](app-engine.md).

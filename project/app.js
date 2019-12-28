@@ -2,7 +2,15 @@ const express = require('express');
 
 const app = express();
 
+
 app.get('/', (req, res) => {
+  res
+    .status(200)
+    .send('Insert content here')
+    .end();
+});
+
+app.get('/hello', (req, res) => {
   res
     .status(200)
     .send('Hello, world!')
@@ -15,3 +23,5 @@ app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
   console.log('Press Ctrl+C to quit.');
 });
+
+module.exports = app;

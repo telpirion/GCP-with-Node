@@ -17,3 +17,12 @@ Here is a list of all the resources I consulted while creating this app.
     *No Node.js version :(.*
   * [Codelab: Build a Node.js & Angular app](https://codelabs.developers.google.com/codelabs/cloud-cardboard-viewer/)
   * [Node.js Flexible Environment Quickstart](https://cloud.google.com/appengine/docs/flexible/nodejs/quickstart#before-you-begin)
+
+## Testing
+
+  * [Tests for Node.js quickstart](https://github.com/GoogleCloudPlatform/nodejs-docs-samples/blob/master/appengine/hello-world/flexible/test/app.test.js)
+  * [Testing Node.js with Mocha and Chai](https://mherman.org/blog/testing-node-js-with-mocha-and-chai/)
+
+## Angular
+
+  * [Codelab: Build a Node.js & Angular app](https://codelabs.developers.google.com/codelabs/cloud-cardboard-viewer/)

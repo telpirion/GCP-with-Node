@@ -11,3 +11,5 @@ I'll add more pages to my journey. You can find the source files in the
 
   * [Getting started](getting-started.md)
   * [Building an App Engine app](app-engine.md)
+  * [Setting up tests](testing.md)
+  * [Expanding the app with Angular](angular.md)

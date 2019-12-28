@@ -94,3 +94,30 @@ my development environment. Note that I ran all of these commands from the
 npm install
 npm start
 ```
+
+I browse to http://localhost:8080/hello and see "Hello, world!" Success!
+
+## Deploy my app
+
+So far, I haven't done anything more than run my Express.js web app locally.
+Now I want to see what happens when I deploy my app to the cloud.
+
+To deploy my app, I need only run a couple of commands:
+
+```
+gcloud app deploy
+
+# Wait a bit ...
+
+gcloud app browse
+
+```
+
+I waited a few moments and ... success! I see "Hello, world!" displayed from an
+*.appspot.com URL.
+
+## Next
+
+Now that I have my simple App Engine app up and running, I want to start
+expanding it a bit more. I love working with Typescript and Angular,
+[so I guess I'll add Angular to my app](angular.md).
