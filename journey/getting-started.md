@@ -13,7 +13,7 @@ To create a project, I did the following:
  1. On the **New Project** screen, give the project a name. *Pro tip*:
     Pick something memorable and unique. This saves you some time and headaches
     further on down the road.
- 1. Click *Create*.
+ 1. Click **Create**.
 
 For more details, take a look at the
 [official documentation](https://cloud.google.com/nodejs/getting-started/#before-you-begin).

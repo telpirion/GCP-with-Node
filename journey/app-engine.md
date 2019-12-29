@@ -7,7 +7,7 @@ Which means what, exactly?
 
 I'd like to equate App Engine to a VM instance, but that's probably not
 quite correct. Rather, I think that App Engine is more like an environment
-running in the cloud. (Obviously, this environment runs on a Google Compute Engine instance, aka a VM). This environment has a slew of services that I can
+running in the cloud. (Obviously, this environment runs on a Google Compute Engine instance, aka a VM.) This environment has a slew of services that I can
 connect to from my app *without having to do all the integration work myself*.
 
 That last bit is the key part, so it's worth repeating: the App Engine
@@ -21,12 +21,8 @@ Of course, there are some steps that I must complete before I can write code.
 
 First, I needed to decide between the
 [Standard or Flexible version of App Engine](https://cloud.google.com/appengine/docs/flexible/go/flexible-for-standard-users#similarities_and_key_differences).
-As I understand it, the Flexible environment is the newer version between the
-two. With the Flexible environment, I write my code "like standard web applications that can run anywhere."
-
-Reading that description, it sounds like I can build a Node.js web app using
-libraries and tools that I already know. That sounds good, so I'll chose the
-Flexible environment.
+As I understand it, the Standard environment is available on an "Always Free
+Tier" of usage, which is the right price for me.
 
 ## Set the active GCP project
 
@@ -50,7 +46,7 @@ With all this done, I'm now ready to rock!
 
 With all the decisions made and environment set, I can begin building the
 App Engine app. (I'm using
-[this quickstart](https://cloud.google.com/appengine/docs/flexible/nodejs/quickstart#before-you-begin)
+[this quickstart](https://cloud.google.com/appengine/docs/standard/nodejs/quickstart)
 as a reference.)
 
 To create my App Engine app, I run this command:
@@ -67,7 +63,7 @@ to use `us-west2`.
 ## Write the code
 
 The
-[quickstart](https://cloud.google.com/appengine/docs/flexible/nodejs/quickstart#before-you-begin)
+[quickstart](https://cloud.google.com/appengine/docs/standard/nodejs/quickstart#download_the_sample_code)
 recommends that I download a GitHub repo for the next couple of steps, but
 I'd prefer to do these steps myself.
 

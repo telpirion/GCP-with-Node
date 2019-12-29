@@ -1,13 +1,13 @@
 {
-  "name": "appengine-hello-world",
-  "description": "Simple Hello World Node.js sample for Google App Engine Flexible Environment.",
+  "name": "GCP-with-Node",
+  "description": "Node.js app built on Google Cloud Platform",
   "version": "0.0.1",
   "private": true,
-  "license": "Apache-2.0",
-  "author": "Google Inc.",
+  "license": "MIT",
+  "author": "Eric Schmidt",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GoogleCloudPlatform/nodejs-docs-samples.git"
+    "url": "https://github.com/telpirion/GCP-with-Node.git"
   },
   "engines": {
     "node": ">=8.0.0"

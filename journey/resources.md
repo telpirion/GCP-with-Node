@@ -16,7 +16,7 @@ Here is a list of all the resources I consulted while creating this app.
   * [Flexible for Standard Environment Users (cloud.google.com)](https://cloud.google.com/appengine/docs/flexible/go/flexible-for-standard-users)
     *No Node.js version :(.*
   * [Codelab: Build a Node.js & Angular app](https://codelabs.developers.google.com/codelabs/cloud-cardboard-viewer/)
-  * [Node.js Flexible Environment Quickstart](https://cloud.google.com/appengine/docs/flexible/nodejs/quickstart#before-you-begin)
+  * [Node.js Standard Environment Quickstart](https://cloud.google.com/appengine/docs/standard/nodejs/quickstart)
 
 ## Testing
 
@@ -25,4 +25,6 @@ Here is a list of all the resources I consulted while creating this app.
 
 ## Angular
 
-  * [Codelab: Build a Node.js & Angular app](https://codelabs.developers.google.com/codelabs/cloud-cardboard-viewer/)
+  * [Cloud Cardboard Viewer app (Node.js & Angular)](https://github.com/googlecodelabs/cloud-cardboard-viewer/tree/master/)
+  * [Angular `ng new` documentation](https://angular.io/cli/new)
+  * [Simple Application with Angular 6 + Node.js](https://levelup.gitconnected.com/simple-application-with-angular-6-node-js-express-2873304fff0f)
