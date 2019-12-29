@@ -104,5 +104,7 @@ dist
 .tern-port
 
 # Sublime Text
-
 *.sublime-workspace
+
+# Angular build output
+public/

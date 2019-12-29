@@ -37,7 +37,7 @@ npm install
 For my first set of tests, I'm going to follow the lead of the official
 [Node.js code samples for App Engine](https://github.com/GoogleCloudPlatform/nodejs-docs-samples/blob/master/appengine/hello-world/flexible/test/app.test.js).
 
-In `app.test.js`, I added the following code:
+In [`app.test.js`](../project/test/app.test.js), I added the following code:
 
 ```
 const app = require('../app');
