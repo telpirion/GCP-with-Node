@@ -13,3 +13,4 @@ I'll add more pages to my journey. You can find the source files in the
   * [Building an App Engine app](app-engine.md)
   * [Setting up tests](testing.md)
   * [Expanding the app with Angular](angular.md)
+  * [Designing the user interface](ui.md)

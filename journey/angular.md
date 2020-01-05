@@ -104,7 +104,7 @@ Lo and behold, a `public/` folder appears in my project.
 ### Serve the Angular app
 
 This next step requires a couple of different changes to my
-[`app.js` file](project/app.js).
+[`app.js` file](../project/app.js).
 
 First, I import the `path` library to my app.js file:
 
@@ -122,16 +122,13 @@ Finally, I change the method that responds to requests to '/' so that it
 returns the `index.html` file for my Angular app.
 
 ```
-app.get('/', (req, res) => {
-  res
-    .status(200)
-    .sendFile(path.join(__dirname, 'public/index.html'))
-    .end();
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 ```
 
 To save myself a little bit of trouble, I also modify the `npm start`
-build script in my [package.json](project/package.json) file.
+build script in my [package.json](../project/package.json) file.
 
 ```
 {
@@ -143,18 +140,24 @@ build script in my [package.json](project/package.json) file.
 }
 ```
 
-There's probably a cleaner way to do this, but this suffices for now. I run the
-project, navigate to `http://localhost:8080`, and see the Angular app being
-being served.
+There's probably a cleaner way to do this, but this suffices for now. To run
+the project locally now, I use the following command:
 
-Note: You might be tempted to change the `start` build rule here, but
+```
+npm run-script local
+```
+
+After running the script, I navigate to `http://localhost:8080`, and see the
+Angular app being being served.
+
+*Note*: You might be tempted to change the `start` build rule here, but
 *don't do it*. App Engine uses the `start` build rule to create the deployed
 version of your app.
 
 ## Re-deploy the app
 
 First, I add the Angular source directory to my
-[`.gcloudignore`](project/.gcloudignore) file. The `gcloud` tool skips over all
+[`.gcloudignore`](../project/.gcloudignore) file. The `gcloud` tool skips over all
 of the files listed in the .gcloudignore file during deployment.
 
 Now, with the Angular app building as I want it to, it's time to deploy the
@@ -168,3 +171,8 @@ gcloud app deploy
 After deployed the app, I run `gcloud app browse` and see the Angular version
 of my app deployed.
 
+## What's next
+
+With the skeleton of my server- and client-side code set up, I can begin
+building my actual app. Next, I'm going to
+[add some meagre functionality to my Angular app](ui.md).
