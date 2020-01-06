@@ -12,11 +12,9 @@ app.get('/hello', (req, res) => {
     .end();
 });
 
-app.get('/', (req, res) => {
-  res
-    .status(200)
-    .sendFile(path.join(__dirname, 'public/index.html'))
-    .end();
+// Returns Angular app.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 // Start the server

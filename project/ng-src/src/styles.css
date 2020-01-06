@@ -24,3 +24,10 @@
 .horizontal-nav li a:hover {
   background-color: #99c;
 }
+
+.page {
+  margin-left: 16px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

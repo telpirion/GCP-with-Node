@@ -1,3 +1,49 @@
-<p>
-  translation works!
-</p>
+<div id="translation" class="page">
+  <div>
+    <h1>Translation</h1>
+    Send a translation request to Google Cloud Translation.
+  </div>
+  <form class="translation-form" [formGroup]="translationForm">
+    <mat-form-field class="translation-source-lang">
+      <mat-label>Source language</mat-label>
+      <mat-select
+        formControlName = "sourceLang">
+        <mat-option *ngFor="let lang of languages" [value]="lang.value">
+          {{lang.displayName}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="translation-target-lang">
+      <mat-label>Target language</mat-label>
+      <mat-select
+        formControlName="targetLang">
+        <mat-option *ngFor="let lang of languages" [value]="lang.value">
+          {{lang.displayName}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="translation-text">
+      <mat-label>Text to translate</mat-label>
+      <textarea matInput
+            cdkTextareaAutosize
+            #autosize="cdkTextareaAutosize"
+            cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="5"
+            formControlName="translationText"></textarea>
+    </mat-form-field>
+  </form>
+  <div>
+    <!--TODO: Change to form submit button -->
+  <button mat-raised-button
+          color="primary"
+          (click)="updateOutput()">Send request</button>
+  </div>
+  <div>
+    <h2>Output</h2>
+    <div class="translation-output">
+        {{ result }}
+    </div>
+  </div>
+</div>

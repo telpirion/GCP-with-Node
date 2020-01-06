@@ -50,3 +50,33 @@ including adding the correct `import` statements to my
 At this point, I can run my app locally to verify that it works. Since I
 haven't made any server-side changes, I can run the app using `ng serve`.
 
+## Adding material to my app
+
+Angular works really well with Material design components. I can import
+the components into my app and they look really nice out-of-the-box.
+
+For my translation app design, I really only need the following components:
+
+  * Two drop-downs for the language selectors
+  * A textbox for the input
+  * A button to send the request to my app
+  * A label to display the output
+
+I can probably use a plain old `div` for the label, so I don't need to worry
+about that. I do need to import the Material components for a drop-down,
+a textbox, and a button.
+
+### Importing Angular Material
+
+From the root of my Angular app, I run `ng add @angular/material`. The
+Angular CLI then asks me some configuration questions and then updates my app
+I decide on the Purple/Amber theme.
+
+Note: The CLI will ask you if you want HammerJS and animations in your app. Unless you know what you’re doing, yes, you want these in your app. Not including them will cause some of the material components to not work correctly.
+
+### Building the user interface
+
+TODO: Mention Reactive forms
+TODO: Show updates to app.module.ts
+TODO: Show updates to translation.component.html
+TODO: Show updates to translation.component.ts

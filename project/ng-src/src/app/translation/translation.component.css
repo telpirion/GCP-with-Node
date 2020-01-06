@@ -1,0 +1,8 @@
+.translation-form {
+  margin-top: 16px;
+}
+
+.translation-form > * {
+  display: block;
+  width: 25%;
+}
