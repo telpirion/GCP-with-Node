@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FormControl, FormGroup } from '@angular/forms';
+import { TranslationRequest, TranslationResult, TranslationService } from '../translation.service'
 
 export interface Language {
     value: string;
     displayName: string;
 }
-
 
 @Component({
   selector: 'app-translation',
@@ -25,7 +25,7 @@ export class TranslationComponent implements OnInit {
   translationForm: FormGroup;
   translationText: string = '';
 
-  constructor() { }
+  constructor(private translationService: TranslationService) { }
 
   ngOnInit() {
     this.translationForm = new FormGroup({
@@ -36,11 +36,22 @@ export class TranslationComponent implements OnInit {
   }
 
   updateOutput() {
-    console.log(this.translationForm.value);
+    // FormGroup.value property allows access to values of the fields
+    // in the form.
     const translationFormValue: any = this.translationForm.value;
-    this.result = `Source language: ${translationFormValue.sourceLang};`;
-    this.result += `Target language: ${translationFormValue.targetLang};`;
-    this.result += `Text to translate: "${translationFormValue.translationText}";`;
+
+    // Create the request.
+    const request = {
+      sourceLang: translationFormValue.sourceLang,
+      targetLang: translationFormValue.targetLang,
+      text: translationFormValue.translationText
+    };
+
+    // Send the request and read the result
+    this.translationService.getTranslation(request)
+      .subscribe((translation: TranslationResult) => {
+        this.result = translation.text;
+      });
   }
 
 }

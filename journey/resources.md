@@ -30,6 +30,7 @@ Here is a list of all the resources I consulted while creating this app.
   * [`ng new` documentation](https://angular.io/cli/new)
   * [Simple Application with Angular 6 + Node.js](https://levelup.gitconnected.com/simple-application-with-angular-6-node-js-express-2873304fff0f)
   * [`ng generate` documentation](https://angular.io/cli/generate)
+  * [HttpClient](https://angular.io/guide/http)
 
 ## Material icons
 

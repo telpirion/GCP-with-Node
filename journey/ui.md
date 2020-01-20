@@ -74,9 +74,99 @@ I decide on the Purple/Amber theme.
 
 Note: The CLI will ask you if you want HammerJS and animations in your app. Unless you know what you’re doing, yes, you want these in your app. Not including them will cause some of the material components to not work correctly.
 
-### Building the user interface
+## Building the user interface
 
-TODO: Mention Reactive forms
-TODO: Show updates to app.module.ts
-TODO: Show updates to translation.component.html
-TODO: Show updates to translation.component.ts
+As mentioned earlier, I'm going to include two drop-downs, a text fields, and
+a button in my user interface. Thus, I'm going to import the `MatButtonModule`
+`MatInputModule`, and `MatSelectModule` modules into my app.
+
+Of course, I want to be able to access the data in the form fields of my user
+interface. To do this, I used
+[Angular reactive forms](https://angular.io/guide/reactive-forms). For my
+UI, I needed to use the `FormGroup` and `FormControl` classes from the
+`ReactiveFormsModule`.
+
+### Adding imports to the app module
+
+I updated the [`app.module.ts`](../project/ng-src/src/app/app.module.ts)
+file with the following code to import the modules I need:
+
+```
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
+@NgModule({
+  ...,
+  imports: [
+    ...
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+  ],
+  ...
+})
+
+```
+
+### Defining the HTML interface
+
+I created a rather simple UI with a `form` tag that includes the other
+form fields. This helps me to access the data from the fields in the form
+from a reference to the form itself.
+
+You can see the final version of the HTML interface
+[here](../project/ng-src/src/app/translation/translation.component.html).
+
+### Adding the behavior of the interface
+
+In the TypeScript code file for my Translation module, I create a new
+instance of the `FormGroup` class and assign it to a variable. The
+variable must match the value that I provided for the `[formGroup]`
+attribute of the form in `translation.component.html`.
+
+Each of the child controls is created as an instance of the `FormControl`
+class. The field name of each control must match the `formControlName`
+attribute of each field in the HTML.
+
+Because of how I defined the individual child controls in my form, I can
+access their values elsewhere in my `TranslationComponent` class.
+
+```
+  languages: Language[] = [
+    { value: 'en-US', displayName: 'English (US)' },
+    { value: 'fr-FR', displayName: 'French (France)' }
+  ];
+
+  sourceLang: string = '';
+  targetLang: string = '';
+  translationForm: FormGroup;
+  translationText: string = '';
+
+  constructor() { }
+
+  ngOnInit() {
+    this.translationForm = new FormGroup({
+        sourceLang: new FormControl(''),
+        targetLang: new FormControl(''),
+        translationText: new FormControl(''),
+      });
+  }
+
+  updateOutput() {
+    const translationFormValue: any = this.translationForm.value;
+    this.result = `Source language: ${translationFormValue.sourceLang};`;
+    this.result += `Target language: ${translationFormValue.targetLang};`;
+    this.result += `Text to translate: "${translationFormValue.translationText}";`;
+  }
+```
+
+## Next
+
+With the UI put together, I can build the
+[Angular service that calls my server's REST API method](ng-service.md).
