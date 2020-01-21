@@ -17,7 +17,9 @@ export class TranslationComponent implements OnInit {
 
   languages: Language[] = [
     { value: 'en-US', displayName: 'English (US)' },
-    { value: 'fr-FR', displayName: 'French (France)' }
+    { value: 'fr-FR', displayName: 'French (France)' },
+    { value: 'es-ES', displayName: 'Spanish (Spain)'},
+    { value: 'de-DE', displayName: 'German'}
   ];
   result: string = 'No result';
   sourceLang: string = '';

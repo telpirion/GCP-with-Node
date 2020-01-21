@@ -18,6 +18,7 @@
     "test": "mocha --exit test/*.test.js"
   },
   "dependencies": {
+    "@google-cloud/translate": "^5.1.4",
     "body-parser": "^1.19.0",
     "express": "^4.16.3"
   },

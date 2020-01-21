@@ -14,3 +14,4 @@ I'll add more pages to my journey. You can find the source files in the
   * [Setting up tests](testing.md)
   * [Expanding the app with Angular](angular.md)
   * [Designing the user interface](ui.md)
+  * [Calling Cloud Translation Advanced](translation.md)

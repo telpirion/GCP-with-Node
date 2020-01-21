@@ -72,8 +72,8 @@ export class TranslationService {
 
 Once the `TranslationService` is created, I can add it to my
 `TranslationComponent` in
-[translation.component.ts](../project/ng-src/src/app/translation/translation.component.ts). First I need to import the `TranslationService` module and
-its exposed types.
+[`translation.component.ts`](../project/ng-src/src/app/translation/translation.component.ts).
+First I need to import the `TranslationService` module and its exposed types.
 
 
 ```
@@ -108,3 +108,8 @@ it calls the `TranslationService` and prints the results.
       });
   }
 ```
+
+## Next
+
+I have the Angular service put together, so now I can
+[build the API service and call the Cloud Translate API](translation.md).

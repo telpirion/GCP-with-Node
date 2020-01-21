@@ -1,6 +1,7 @@
+const bodyParser = require('body-parser');
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser');
+const translation = require('./translation.js')
 
 const app = express();
 
@@ -13,12 +14,13 @@ app.post('/api/translation', (req, res) => {
   const sourceLang = req.body.sourceLang;
   const targetLang = req.body.targetLang;
 
-  let result = `${translationText} from ${sourceLang} to ${targetLang}`;
-
-  res
-    .status(200)
-    .json({ text: result })
-    .end();
+  translation.translateText(sourceLang, targetLang, translationText)
+    .then(d => {
+      res
+        .status(200)
+        .json({ text: d })
+        .end();
+    });
 
 });
 

@@ -108,3 +108,6 @@ dist
 
 # Angular build output
 public/
+
+# GCP service account file
+service-account.json

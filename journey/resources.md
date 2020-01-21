@@ -36,3 +36,10 @@ Here is a list of all the resources I consulted while creating this app.
 
   * [Angular Material Getting Started](https://material.angular.io/guide/getting-started)
   * [Angular Reactive Forms](https://angular.io/guide/reactive-forms)
+
+## Machine learning
+
+### Translation
+
+  * [Translating text with Translation Advanced](https://cloud.google.com/translate/docs/advanced/translating-text-v3)
+  * [Working with Environment Variables in Node.js](https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html)
